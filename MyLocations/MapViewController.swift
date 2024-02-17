@@ -23,6 +23,20 @@ class MapViewController: UIViewController {
         }
     }
     
+    // MARK: - Navigation
+    override func prepare(
+        for segue: UIStoryboardSegue,
+        sender: Any?) {
+            if segue.identifier == "EditLocation" {
+                let controller = segue.destination as! LocationDetailsViewController
+                controller.managedObjectContext = managedObjectContext
+                
+                let button = sender as! UIButton
+                let location = locations[button.tag]
+                controller.locationToEdit = location
+            }
+        }
+    
     // MARK: - Actions
     @IBAction func showUser() {
         let region = MKCoordinateRegion(
@@ -100,6 +114,7 @@ class MapViewController: UIViewController {
         
     }
     @objc func showLocationDetails(_ sender: UIButton) {
+        performSegue(withIdentifier: "EditLocation", sender: sender)
         
     }
 }
