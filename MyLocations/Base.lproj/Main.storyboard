@@ -172,14 +172,35 @@
         <!--Map-->
         <scene sceneID="DVi-de-zMQ">
             <objects>
-                <viewController title="Map" id="jQU-eL-Cu0" sceneMemberID="viewController">
+                <viewController title="Map" id="jQU-eL-Cu0" customClass="MapViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rfu-CV-sYE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="v0f-Cr-DSz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HnD-oX-9bT">
+                                        <rect key="frame" x="-22" y="64" width="397" height="554"/>
+                                        <standardMapConfiguration key="preferredConfiguration"/>
+                                    </mapView>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="ZAF-1M-cYM"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="HnD-oX-9bT" firstAttribute="trailing" secondItem="ZAF-1M-cYM" secondAttribute="trailing" id="Esj-TJ-ZRf"/>
+                                    <constraint firstItem="HnD-oX-9bT" firstAttribute="leading" secondItem="v0f-Cr-DSz" secondAttribute="leadingMargin" constant="-30" id="Nuy-I1-B2J"/>
+                                    <constraint firstItem="HnD-oX-9bT" firstAttribute="bottom" secondItem="ZAF-1M-cYM" secondAttribute="bottom" id="cTY-xC-sDv"/>
+                                    <constraint firstItem="HnD-oX-9bT" firstAttribute="top" secondItem="ZAF-1M-cYM" secondAttribute="top" id="kuq-yb-g2k"/>
+                                </constraints>
+                            </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z4T-Ym-n7e">
                                 <rect key="frame" x="-14" y="64" width="389" height="554"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jQU-eL-Cu0" id="kqF-n7-bQh"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E0h-oU-0J0"/>
@@ -192,9 +213,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="bPn-2I-GkO">
-                        <barButtonItem key="leftBarButtonItem" title="Locations" id="1Ch-mW-xsD"/>
-                        <barButtonItem key="rightBarButtonItem" title="User" id="bdp-DU-cEX"/>
+                        <barButtonItem key="leftBarButtonItem" title="Locations" id="1Ch-mW-xsD">
+                            <connections>
+                                <action selector="showLocations" destination="jQU-eL-Cu0" id="SCt-e3-HEc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="User" id="bdp-DU-cEX">
+                            <connections>
+                                <action selector="showUser" destination="jQU-eL-Cu0" id="Dev-ut-Knr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="Z4T-Ym-n7e" id="qQc-gC-8fa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y73-O6-LAm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
