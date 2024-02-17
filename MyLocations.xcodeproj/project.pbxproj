@@ -18,6 +18,8 @@
 		395B4A4E2B78B22700246CDC /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A4D2B78B22700246CDC /* CategoryPickerViewController.swift */; };
 		395B4A502B78C2C600246CDC /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A4F2B78C2C600246CDC /* HudView.swift */; };
 		395B4A522B78CF3500246CDC /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A512B78CF3500246CDC /* Functions.swift */; };
+		395B4A552B7F0E9A00246CDC /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A532B7F0E9A00246CDC /* Location+CoreDataClass.swift */; };
+		395B4A562B7F0E9A00246CDC /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A542B7F0E9A00246CDC /* Location+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		395B4A4D2B78B22700246CDC /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		395B4A4F2B78C2C600246CDC /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		395B4A512B78CF3500246CDC /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		395B4A532B7F0E9A00246CDC /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		395B4A542B7F0E9A00246CDC /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,8 @@
 		395B4A282B753D2D00246CDC = {
 			isa = PBXGroup;
 			children = (
+				395B4A532B7F0E9A00246CDC /* Location+CoreDataClass.swift */,
+				395B4A542B7F0E9A00246CDC /* Location+CoreDataProperties.swift */,
 				395B4A332B753D2E00246CDC /* MyLocations */,
 				395B4A322B753D2E00246CDC /* Products */,
 			);
@@ -157,8 +163,10 @@
 				395B4A392B753D2E00246CDC /* CurrentLocationViewController.swift in Sources */,
 				395B4A352B753D2E00246CDC /* AppDelegate.swift in Sources */,
 				395B4A522B78CF3500246CDC /* Functions.swift in Sources */,
+				395B4A562B7F0E9A00246CDC /* Location+CoreDataProperties.swift in Sources */,
 				395B4A3F2B753D2E00246CDC /* MyLocations.xcdatamodeld in Sources */,
 				395B4A372B753D2E00246CDC /* SceneDelegate.swift in Sources */,
+				395B4A552B7F0E9A00246CDC /* Location+CoreDataClass.swift in Sources */,
 				395B4A502B78C2C600246CDC /* HudView.swift in Sources */,
 				395B4A4C2B787A5300246CDC /* LocationDetailsViewController.swift in Sources */,
 			);
