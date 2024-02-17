@@ -121,7 +121,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" id="9hp-d9-3Be">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" id="9hp-d9-3Be" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9hp-d9-3Be" id="UeE-9X-h9G">
@@ -150,6 +150,11 @@
                                         <constraint firstItem="SGJ-er-I46" firstAttribute="top" secondItem="UeE-9X-h9G" secondAttribute="topMargin" id="obT-m8-DCK"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="62g-J9-3bQ" id="ScI-Eq-XOM"/>
+                                    <outlet property="descriptionLabel" destination="SGJ-er-I46" id="4nc-wa-UVv"/>
+                                    <segue destination="qvT-kn-c7v" kind="show" identifier="EditLocation" id="Q0X-OS-nb2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -485,6 +490,9 @@
             <point key="canvasLocation" x="1031.2" y="3.1484257871064472"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q0X-OS-nb2"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
