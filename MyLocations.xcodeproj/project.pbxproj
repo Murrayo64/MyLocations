@@ -24,6 +24,7 @@
 		395B4A5A2B80777800246CDC /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A592B80777800246CDC /* LocationCell.swift */; };
 		395B4A5C2B8155D100246CDC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A5B2B8155D100246CDC /* MapViewController.swift */; };
 		395B4A5E2B81E5E400246CDC /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A5D2B81E5E400246CDC /* UIImage+Resize.swift */; };
+		395B4A602B828EE600246CDC /* String+AddText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A5F2B828EE600246CDC /* String+AddText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		395B4A592B80777800246CDC /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		395B4A5B2B8155D100246CDC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		395B4A5D2B81E5E400246CDC /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
+		395B4A5F2B828EE600246CDC /* String+AddText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+AddText.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				395B4A5D2B81E5E400246CDC /* UIImage+Resize.swift */,
 				395B4A532B7F0E9A00246CDC /* Location+CoreDataClass.swift */,
+				395B4A5F2B828EE600246CDC /* String+AddText.swift */,
 				395B4A542B7F0E9A00246CDC /* Location+CoreDataProperties.swift */,
 				395B4A332B753D2E00246CDC /* MyLocations */,
 				395B4A322B753D2E00246CDC /* Products */,
@@ -183,6 +186,7 @@
 				395B4A3F2B753D2E00246CDC /* MyLocations.xcdatamodeld in Sources */,
 				395B4A372B753D2E00246CDC /* SceneDelegate.swift in Sources */,
 				395B4A552B7F0E9A00246CDC /* Location+CoreDataClass.swift in Sources */,
+				395B4A602B828EE600246CDC /* String+AddText.swift in Sources */,
 				395B4A502B78C2C600246CDC /* HudView.swift in Sources */,
 				395B4A4C2B787A5300246CDC /* LocationDetailsViewController.swift in Sources */,
 			);
@@ -347,6 +351,7 @@
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "\"\"";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,6 +383,7 @@
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "\"\"";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
