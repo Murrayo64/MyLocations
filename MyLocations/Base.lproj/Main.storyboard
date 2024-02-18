@@ -106,7 +106,9 @@
                         <outlet property="addressLabel" destination="yGY-QE-g1z" id="dum-fx-By0"/>
                         <outlet property="getButton" destination="YMC-Ct-fJX" id="6Sz-Rh-VBw"/>
                         <outlet property="latitudeLabel" destination="cpV-jf-G3D" id="ikl-Wz-nD5"/>
+                        <outlet property="latitudeTextLabel" destination="p5S-bZ-m3Q" id="nbd-Un-ADc"/>
                         <outlet property="longitudeLabel" destination="Eec-7e-DKP" id="7T2-Y7-o7B"/>
+                        <outlet property="longitudeTextLabel" destination="gkm-0C-KsN" id="uhi-yF-RuM"/>
                         <outlet property="messageLabel" destination="yFv-to-Ppg" id="35a-4W-0Oj"/>
                         <outlet property="tagButton" destination="oKa-Og-2Nm" id="YOK-7G-pkq"/>
                     </connections>
@@ -382,7 +384,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -405,8 +407,8 @@
                                                     <rect key="frame" x="326" y="15" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -463,7 +465,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -606,7 +608,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="C45-mk-Tst"/>
+        <segue reference="RY1-R0-0iL"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
