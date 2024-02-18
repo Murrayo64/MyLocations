@@ -80,7 +80,7 @@ class LocationDetailsViewController: UITableViewController {
             action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false
         tableView.addGestureRecognizer(gestureRecognizer)
-        
+        listenForBackgroundNotification()
     }
     
     // MARK: - Helper Methods
@@ -105,6 +105,19 @@ class LocationDetailsViewController: UITableViewController {
             text += tmp
         }
         return text
+    }
+    
+    func listenForBackgroundNotification() {
+        NotificationCenter.default.addObserver(
+            forName: UIScene.didEnterBackgroundNotification,
+            object: nil,
+            queue: OperationQueue.main) { _ in
+                if self.presentedViewController != nil {
+                    self.dismiss(animated: false, completion: nil)
+                }
+                self.descriptionTextView.resignFirstResponder()
+                
+            }
     }
     
     func format(date: Date) -> String {
