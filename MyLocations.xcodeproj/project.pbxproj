@@ -23,6 +23,7 @@
 		395B4A582B80691900246CDC /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A572B80691900246CDC /* LocationsViewController.swift */; };
 		395B4A5A2B80777800246CDC /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A592B80777800246CDC /* LocationCell.swift */; };
 		395B4A5C2B8155D100246CDC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A5B2B8155D100246CDC /* MapViewController.swift */; };
+		395B4A5E2B81E5E400246CDC /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395B4A5D2B81E5E400246CDC /* UIImage+Resize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		395B4A572B80691900246CDC /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		395B4A592B80777800246CDC /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		395B4A5B2B8155D100246CDC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		395B4A5D2B81E5E400246CDC /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		395B4A282B753D2D00246CDC = {
 			isa = PBXGroup;
 			children = (
+				395B4A5D2B81E5E400246CDC /* UIImage+Resize.swift */,
 				395B4A532B7F0E9A00246CDC /* Location+CoreDataClass.swift */,
 				395B4A542B7F0E9A00246CDC /* Location+CoreDataProperties.swift */,
 				395B4A332B753D2E00246CDC /* MyLocations */,
@@ -175,6 +178,7 @@
 				395B4A582B80691900246CDC /* LocationsViewController.swift in Sources */,
 				395B4A562B7F0E9A00246CDC /* Location+CoreDataProperties.swift in Sources */,
 				395B4A5C2B8155D100246CDC /* MapViewController.swift in Sources */,
+				395B4A5E2B81E5E400246CDC /* UIImage+Resize.swift in Sources */,
 				395B4A5A2B80777800246CDC /* LocationCell.swift in Sources */,
 				395B4A3F2B753D2E00246CDC /* MyLocations.xcdatamodeld in Sources */,
 				395B4A372B753D2E00246CDC /* SceneDelegate.swift in Sources */,
