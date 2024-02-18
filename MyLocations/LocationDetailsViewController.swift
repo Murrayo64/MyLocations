@@ -27,6 +27,7 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var addPhotoLabel: UILabel!
     @IBOutlet var imageHeight: NSLayoutConstraint!
+    var observer: Any!
     var image: UIImage?
     var coordinate = CLLocationCoordinate2D(
         latitude: 0,
@@ -108,16 +109,22 @@ class LocationDetailsViewController: UITableViewController {
     }
     
     func listenForBackgroundNotification() {
-        NotificationCenter.default.addObserver(
-            forName: UIScene.didEnterBackgroundNotification,
+        observer = NotificationCenter.default.addObserver(
+            forName: UIApplication.didEnterBackgroundNotification,
             object: nil,
-            queue: OperationQueue.main) { _ in
-                if self.presentedViewController != nil {
-                    self.dismiss(animated: false, completion: nil)
-                }
-                self.descriptionTextView.resignFirstResponder()
+            queue: OperationQueue.main) { [weak self] _ in
                 
+                if let weakSelf = self {
+                    if weakSelf.presentedViewController != nil {
+                        weakSelf.dismiss(animated: false, completion: nil)
+                    }
+                    weakSelf.descriptionTextView.resignFirstResponder()
+                }
             }
+    }
+    deinit {
+        print("*** deinit \(self)")
+        NotificationCenter.default.removeObserver(observer!)
     }
     
     func format(date: Date) -> String {
