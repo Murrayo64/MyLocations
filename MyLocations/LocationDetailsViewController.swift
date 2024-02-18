@@ -204,7 +204,24 @@ class LocationDetailsViewController: UITableViewController {
         location.longitude = coordinate.longitude
         location.date = date
         location.placemark = placemark
-        // 3
+        
+        // Save image
+        if let image = image {
+            // 1
+            if !location.hasPhoto {
+                location.photoID = Location.nextPhotoID() as NSNumber
+            }
+            // 2
+            if let data = image.jpegData(compressionQuality: 0.5) {
+                // 3
+                do {
+                    try data.write(to: location.photoURL, options: .atomic)
+                } catch {
+                    print("Error writing file: \(error)")
+                }
+            }
+        }
+        
         do {
             try managedObjectContext.save()
             afterDelay(0.6) {
@@ -212,7 +229,6 @@ class LocationDetailsViewController: UITableViewController {
                 self.navigationController?.popViewController(animated: true)
             }
         } catch {
-            // 4
             fatalCoreDataError(error)
         }
     }
