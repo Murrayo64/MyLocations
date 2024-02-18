@@ -225,12 +225,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="bPn-2I-GkO">
-                        <barButtonItem key="leftBarButtonItem" title="Locations" id="1Ch-mW-xsD">
+                        <barButtonItem key="leftBarButtonItem" title="Locations" image="Pin" id="1Ch-mW-xsD">
                             <connections>
                                 <action selector="showLocations" destination="jQU-eL-Cu0" id="SCt-e3-HEc"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="User" id="bdp-DU-cEX">
+                        <barButtonItem key="rightBarButtonItem" title="User" image="User" id="bdp-DU-cEX">
                             <connections>
                                 <action selector="showUser" destination="jQU-eL-Cu0" id="Dev-ut-Knr"/>
                             </connections>
@@ -606,13 +606,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RY1-R0-0iL"/>
+        <segue reference="C45-mk-Tst"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="Locations" width="30" height="30"/>
         <image name="Map" width="30" height="30"/>
+        <image name="Pin" width="24" height="24"/>
         <image name="Tag" width="30" height="30"/>
+        <image name="User" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.93333333333333335" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
