@@ -141,7 +141,7 @@ class LocationsViewController: UITableViewController {
         titleForHeaderInSection section: Int
     ) -> String? {
         let sectionInfo = fetchedResultsController.sections![section]
-        return sectionInfo.name
+        return sectionInfo.name.uppercased()
     }
     
     // MARK: - Navigation
