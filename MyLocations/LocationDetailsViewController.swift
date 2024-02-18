@@ -24,6 +24,9 @@ class LocationDetailsViewController: UITableViewController {
     @IBOutlet var longitudeLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var addPhotoLabel: UILabel!
+    var image: UIImage?
     var coordinate = CLLocationCoordinate2D(
         latitude: 0,
         longitude: 0)
@@ -105,6 +108,12 @@ class LocationDetailsViewController: UITableViewController {
     
     func format(date: Date) -> String {
         return dateFormatter.string(from: date)
+    }
+    
+    func show(image: UIImage) {
+        imageView.image = image
+        imageView.isHidden = false
+        addPhotoLabel.text = ""
     }
     
     // MARK: - Navigation
@@ -210,6 +219,10 @@ extension LocationDetailsViewController:
     // MARK: - Image Picker Delegates
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        if let theImage = image {
+            show(image: theImage)
+        }
         dismiss(animated: true, completion: nil)
     }
     
