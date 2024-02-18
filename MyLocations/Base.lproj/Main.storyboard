@@ -247,7 +247,7 @@
         <scene sceneID="DxL-Et-gid">
             <objects>
                 <navigationController id="AFK-7g-Rdz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Locations" id="tWE-SZ-IrI"/>
+                    <tabBarItem key="tabBarItem" title="Locations" image="Locations" id="tWE-SZ-IrI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1uV-dh-s7F">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -568,7 +568,7 @@
         <scene sceneID="DdS-WS-VXn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7nx-uA-Tru" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tag" id="Ur4-HW-U2C"/>
+                    <tabBarItem key="tabBarItem" title="Tag" image="Tag" id="Ur4-HW-U2C"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hFF-Eh-QvL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -587,7 +587,7 @@
         <scene sceneID="hIO-oh-BDY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="14K-WG-9ah" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="TJY-ie-gEh"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map" id="TJY-ie-gEh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ug3-sh-Q9h">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -604,9 +604,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Q0X-OS-nb2"/>
+        <segue reference="RY1-R0-0iL"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Locations" width="30" height="30"/>
+        <image name="Map" width="30" height="30"/>
+        <image name="Tag" width="30" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
