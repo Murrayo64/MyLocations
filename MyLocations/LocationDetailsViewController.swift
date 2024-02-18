@@ -145,6 +145,8 @@ class LocationDetailsViewController: UITableViewController {
     ) {
         if indexPath.section == 0 && indexPath.row == 0 {
             descriptionTextView.becomeFirstResponder()
+        } else if indexPath.section == 1 && indexPath.row == 0 {
+            takePhotoWithCamera()
         }
     }
     
@@ -192,4 +194,25 @@ class LocationDetailsViewController: UITableViewController {
             categoryName = controller.selectedCategoryName
             categoryLabel.text = categoryName
         }
+}
+extension LocationDetailsViewController:
+    UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    // MARK: - Image Helper Methods
+    func takePhotoWithCamera() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    // MARK: - Image Picker Delegates
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
 }
