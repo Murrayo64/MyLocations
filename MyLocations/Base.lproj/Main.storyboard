@@ -130,30 +130,40 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGJ-er-I46">
-                                            <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                            <rect key="frame" x="76" y="11" width="283" height="21"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62g-J9-3bQ">
-                                            <rect key="frame" x="16" y="44" width="343" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62g-J9-3bQ">
+                                            <rect key="frame" x="76" y="44" width="53" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.49577487244897961" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pEk-jL-HOd">
+                                            <rect key="frame" x="16" y="6" width="52" height="52"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="52" id="K1J-1q-Tct"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="62g-J9-3bQ" firstAttribute="top" secondItem="SGJ-er-I46" secondAttribute="bottom" constant="12" id="CBI-7u-mbQ"/>
-                                        <constraint firstItem="62g-J9-3bQ" firstAttribute="leading" secondItem="SGJ-er-I46" secondAttribute="leading" id="F9N-NP-laq"/>
+                                        <constraint firstItem="62g-J9-3bQ" firstAttribute="leading" secondItem="pEk-jL-HOd" secondAttribute="trailing" constant="8" symbolic="YES" id="EDV-l7-FjF"/>
+                                        <constraint firstItem="pEk-jL-HOd" firstAttribute="leading" secondItem="UeE-9X-h9G" secondAttribute="leadingMargin" id="EKl-0W-9Bf"/>
+                                        <constraint firstItem="SGJ-er-I46" firstAttribute="leading" secondItem="pEk-jL-HOd" secondAttribute="trailing" constant="8" symbolic="YES" id="PKr-yB-Kpt"/>
                                         <constraint firstItem="SGJ-er-I46" firstAttribute="trailing" secondItem="UeE-9X-h9G" secondAttribute="trailingMargin" id="XYP-R2-wwV"/>
+                                        <constraint firstItem="pEk-jL-HOd" firstAttribute="top" secondItem="UeE-9X-h9G" secondAttribute="topMargin" constant="-5" id="ai5-7b-Ury"/>
+                                        <constraint firstItem="pEk-jL-HOd" firstAttribute="centerY" secondItem="UeE-9X-h9G" secondAttribute="centerY" id="kVK-gr-MFK"/>
                                         <constraint firstItem="62g-J9-3bQ" firstAttribute="trailing" secondItem="SGJ-er-I46" secondAttribute="trailing" id="kfW-oV-sd1"/>
-                                        <constraint firstItem="SGJ-er-I46" firstAttribute="leading" secondItem="UeE-9X-h9G" secondAttribute="leadingMargin" id="mYD-7d-gW2"/>
                                         <constraint firstItem="SGJ-er-I46" firstAttribute="top" secondItem="UeE-9X-h9G" secondAttribute="topMargin" id="obT-m8-DCK"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="addressLabel" destination="62g-J9-3bQ" id="ScI-Eq-XOM"/>
                                     <outlet property="descriptionLabel" destination="SGJ-er-I46" id="4nc-wa-UVv"/>
+                                    <outlet property="photoImageView" destination="pEk-jL-HOd" id="T3C-D0-kfg"/>
                                     <segue destination="qvT-kn-c7v" kind="show" identifier="EditLocation" id="Q0X-OS-nb2"/>
                                 </connections>
                             </tableViewCell>
@@ -594,7 +604,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="C45-mk-Tst"/>
+        <segue reference="Q0X-OS-nb2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
